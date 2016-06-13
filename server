@@ -1,0 +1,9 @@
+#!/bin/bash
+##
+LOC=`pwd`
+if [ "$1" == "find-s" ] ; then
+read -p "License Number/ Name:" a
+cat /var/www/html/client/users.txt | grep $a
+else
+echo "command error"
+fi
