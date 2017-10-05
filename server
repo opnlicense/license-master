@@ -12,7 +12,8 @@ echo "**************************************"
 read -p "License Number/ Name:" a
 sed -i '/'$a'/d' /var/www/html/client/users.txt
 mkdir -p /var/www/html/archive >> /dev/null
-mv /var/www/html/$a /var/www/html/archive >> /dev/null 
+mv /var/www/html/$a /var/www/html/archive >> /dev/null
+echo "License No : $a has been removed"
 
 else
 echo "command error"
