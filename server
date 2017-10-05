@@ -4,6 +4,12 @@ LOC=`pwd`
 if [ "$1" == "find-s" ] ; then
 read -p "License Number/ Name:" a
 cat /var/www/html/client/users.txt | grep $a
+
+elif [ "$1" == "find-d" ] ; then
+echo "Removing License"
+read -p "License Number/ Name:" a
+sed -i '/'$a'/d' /var/www/html/client/users.txt
+
 else
 echo "command error"
 fi
