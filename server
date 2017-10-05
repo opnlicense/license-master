@@ -7,9 +7,15 @@ cat /var/www/html/client/users.txt | grep $a
 
 elif [ "$1" == "find-d" ] ; then
 echo "Removing License"
+echo "You must have to enter license number"
+echo "**************************************"
 read -p "License Number/ Name:" a
 sed -i '/'$a'/d' /var/www/html/client/users.txt
+mkdir -p /var/www/html/archive >> /dev/null
+mv /var/www/html/$a /var/www/html/archive >> /dev/null 
 
 else
 echo "command error"
+echo "Please give an argument"
+echo " Eg: server find-s"
 fi
