@@ -1,4 +1,5 @@
 #!/bin/bash
+##License generator 
 n=$RANDOM
 read -p "Enter 6 numbers:" a
 read -p "Licensee Name:" b
